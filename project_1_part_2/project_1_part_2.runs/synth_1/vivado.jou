@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Feb 25 13:39:12 2020
+# Process ID: 7048
+# Current directory: C:/Users/PMARINA/Documents/DSD/project_1_part_2/project_1_part_2.runs/synth_1
+# Command line: vivado.exe -log hexcount.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hexcount.tcl
+# Log file: C:/Users/PMARINA/Documents/DSD/project_1_part_2/project_1_part_2.runs/synth_1/hexcount.vds
+# Journal file: C:/Users/PMARINA/Documents/DSD/project_1_part_2/project_1_part_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hexcount.tcl -notrace
