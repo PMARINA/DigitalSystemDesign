@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Tue Feb 25 13:30:57 2020
-| Host             : DESKTOP-44NJP28 running 64-bit major release  (build 9200)
+| Date             : Fri May 15 22:35:39 2020
+| Host             : DESKTOP-6VR7BEM running 64-bit major release  (build 9200)
 | Command          : report_power -file leddec_power_routed.rpt -pb leddec_power_summary_routed.pb -rpx leddec_power_routed.rpx
 | Design           : leddec
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.703       |
+| Total On-Chip Power (W)  | 0.112        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.498       |
-| Device Static (W)        | 0.205        |
+| Dynamic (W)              | 0.015        |
+| Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 36.2         |
-| Junction Temperature (C) | 73.8         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,12 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.031 |       11 |       --- |             --- |
-|   LUT as Logic |     0.031 |        6 |     63400 |           <0.01 |
-| Signals        |     0.118 |       17 |       --- |             --- |
-| I/O            |    10.348 |       17 |       210 |            8.10 |
-| Static Power   |     0.205 |          |           |                 |
-| Total          |    10.703 |          |           |                 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |      298 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      145 |     63400 |            0.23 |
+|   CARRY4       |    <0.001 |       40 |     15850 |            0.25 |
+|   Register     |    <0.001 |       78 |    126800 |            0.06 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |     0.001 |      243 |       --- |             --- |
+| I/O            |     0.012 |       49 |       210 |           23.33 |
+| Static Power   |     0.097 |          |           |                 |
+| Total          |     0.112 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.275 |       0.173 |      0.101 |
-| Vccaux    |       1.800 |     0.407 |       0.378 |      0.029 |
-| Vcco33    |       3.300 |     2.926 |       2.922 |      0.004 |
+| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -120,9 +125,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------+--------+-----------------+
-| Clock | Domain | Constraint (ns) |
-+-------+--------+-----------------+
++-------------+-----------+-----------------+
+| Clock       | Domain    | Constraint (ns) |
++-------------+-----------+-----------------+
+| sys_clk_pin | CLK100MHZ |            10.0 |
++-------------+-----------+-----------------+
 
 
 3. Detailed Reports
@@ -134,7 +141,7 @@ Table of Contents
 +--------+-----------+
 | Name   | Power (W) |
 +--------+-----------+
-| leddec |    10.498 |
+| leddec |     0.015 |
 +--------+-----------+
 
 

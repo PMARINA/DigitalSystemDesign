@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/PMARINA/Documents/DSD/Lab 1 Restart/Lab 1 Restart.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/PMARINA/Documents/DSD/1ar/Lab 1 Restart.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c3046306762487793a96a3a2b6a6312"/>
@@ -82,6 +82,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/leddec.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
